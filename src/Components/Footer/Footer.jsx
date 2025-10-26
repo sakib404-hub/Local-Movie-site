@@ -33,19 +33,16 @@ const Footer = () => {
                         {/* Twitter */}
                         <a href="#" className="hover:text-blue-400 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195..."></path>
                             </svg>
                         </a>
                         {/* YouTube */}
                         <a href="#" className="hover:text-red-500 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0..."></path>
                             </svg>
                         </a>
                         {/* Facebook */}
                         <a href="#" className="hover:text-blue-600 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667..."></path>
                             </svg>
                         </a>
                     </div>
