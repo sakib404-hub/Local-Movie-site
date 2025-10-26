@@ -1,2 +1,11 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui"
+{
+    themes: light --default, dark cupcake;
+};
+.nav-link.active{
+    transition: all 3s ease-in;
+    transform: scale(1.05);
+    background-color: blue;
+    color: white;
+}
