@@ -6,6 +6,9 @@ const Header = () => {
     const [toggle, setToggle] = useState(false);
     const navigate = useNavigate();
 
+    const handleButtonClicked = () => {
+        navigate('/tamilmovies')
+    }
     return (
         <header className="bg-gradient-to-r from-[aliceblue] via-[#e9f3ff] to-[#d8ecff] text-gray-800 shadow-lg sticky top-0 z-50 backdrop-blur-md border-b border-blue-100">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">

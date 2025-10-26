@@ -10,6 +10,7 @@ import Allmovies from './Components/AllMovies/Allmovies.jsx';
 import MarvelMovies from './Components/MarvelMovies/MarvelMovies.jsx';
 import TamilMovies from './Components/TamilMovies/TamilMovies.jsx';
 import AnimatedMovies from './Components/AnimatedMovies/AnimatedMovies.jsx';
+import Loader from './Components/Loader/Loader.jsx';
 
 const allMoviesPromise = async () => {
   const url = '../public/all.json'
@@ -25,24 +26,32 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/allmovies',
-        element: <Suspense fallback={<div>Loading......</div>}>
+        element: <Suspense fallback={<Loader></Loader>}>
           <Allmovies allMovies={allMovies}></Allmovies>
         </Suspense>
       },
       {
         path: '/marvelmovies',
         loader: () => fetch('../public/marvelMovies.json'),
-        Component: MarvelMovies
+        element: <Suspense fallback={<Loader></Loader>}>
+          <MarvelMovies></MarvelMovies>
+        </Suspense>
       },
       {
         path: '/tamilmovies',
         loader: () => fetch('../public/tamilMovies.json'),
-        Component: TamilMovies
+        element: <Suspense fallback={<Loader></Loader>
+        }>
+          <TamilMovies></TamilMovies>
+        </Suspense>
       },
       {
         path: '/animatedmovies',
         loader: () => fetch('../public/animatedJsonData.json'),
-        Component: AnimatedMovies
+        element: <Suspense fallback={<Loader></Loader>
+        }>
+          <AnimatedMovies></AnimatedMovies>
+        </Suspense>
       }
     ]
   }
